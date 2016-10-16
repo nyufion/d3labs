@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Yuchi Du, Homework 1</title>
+   <meta charset="utf-8">
+	<style type="text/css">
+		body, h1 {margin: 0px;}
+		h1 {padding: 10px; margin: 0px;}
+		h1 {background: black; color: white;}
+		h2 {font-weight: bold;}
+		div{margin-left: 20px}
+		ul {list-style: none; margin: 0px; padding: 0;}
+      li {margin-left: 0px; padding: 0px;}
+		li:hover{background: #CCC; color: white; cursor: pointer}
+	</style>
+</head>
+<body>
+   <h1>Gapiminder - Wealth and Health of Nations</h1>
+   <div>
+   		<h2>Countries</h2>
+   		<label for="">Name</label>
+   		<input type="text" name="name" id="name">
+   		<input type="button" name="submit" value="Add" onclick="addName()">
+   		<hr/>
+   		<ul id="log">
+   		</ul>
+   </div>
+   <script type="text/javascript">
+   		function addName(newName){
+   			if(!newName){
+   				newName = document.getElementById("name").value;
+   			}
+   			logName(newName);
+   		}
+   		function logName(newName){
+   			var log = document.getElementById("log");
+   			var li = document.createElement("li");
+   			li.innerHTML = newName;
+   			log.appendChild(li);
+   		}
+   </script>
+</body>
+</html>
